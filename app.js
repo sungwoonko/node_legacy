@@ -25,13 +25,16 @@ app.use(express.static(__dirname+'/public'))
 app.get('/',  (req, res) => {    //  => , function(req,res) 같은 표기법이다.
   res.render('index')
 })
-app.get('/blog',  (req, res) => {    //  => , function(req,res) 같은 표기법이다.
+
+app.get('/blog',  (req, res) => {    
   res.render('blog')
 })
-app.get('/users',  (req, res) => {    //  => , function(req,res) 같은 표기법이다.
+
+app.get('/users',  (req, res) => {   
   res.render('users')
 })
-app.get('/contact',  (req, res) => {    //  => , function(req,res) 같은 표기법이다.
+
+app.get('/contact',  (req, res) => {    
   res.render('contact')
 })
 
