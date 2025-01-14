@@ -2,27 +2,18 @@ const express = require('express')
 const app = express()
 const port = 3000
 
-app.get('/', function (req, res) {
-  res.send('Hello World')
-app.get('/',  (req, res) => {    //  => , function(req,res) 같은 표기법이다.
-  console.group('Got a GET request from Client')
-  res.send('Got a response from Server')
-})
-app.post('/',  (req, res) => {    
-  console.group('Got a POST request from Client')
-  res.send('Got a response from Server')
-})
-app.put('/user',  (req, res) => {   
-  console.group('Got a PUT request from Client')
-  res.send('Got a response from Server')
-})
-app.delete('/user',  (req, res) => {     //  실행할때 /user이라고 적혀있으면 이것도 같이 적어줘야한다.
-  console.group('Got a DELETE request from Client')
-  res.send('Got a response from Server')
+app.post('/api/contact',(req,res) => {
+  const name = req.body.name;
+  const phone = req.body.phone;
+  const email = req.body.email;
+  const memo = req.body.memo;
+
+  const data = `${name} ${phone} ${email} ${memo}`
+
+  res.send(data)
+
 })
 
-app.listen(3000)
 app.listen(port, () => {
   console.log(`Node Legacy App listening on port ${port}`)
-})
 })
