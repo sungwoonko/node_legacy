@@ -14,6 +14,8 @@ app.post('/api/contact',(req,res) => {
 
   res.send(data)
 
+})
+
 app.set('view engine', 'ejs')
 app.set('views', './views')
 
@@ -28,6 +30,9 @@ app.get('/blog',  (req, res) => {    //  => , function(req,res) 같은 표기법
 })
 app.get('/users',  (req, res) => {    //  => , function(req,res) 같은 표기법이다.
   res.render('users')
+})
+app.get('/contact',  (req, res) => {    //  => , function(req,res) 같은 표기법이다.
+  res.render('contact')
 })
 
 app.listen(port, () => {
