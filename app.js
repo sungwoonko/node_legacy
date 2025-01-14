@@ -1,5 +1,6 @@
 const express = require('express')
 const ejs = require('ejs')
+const bodyParser = require('body-parser')
 const app = express()
 const port = 3000
 
@@ -21,6 +22,11 @@ app.set('views', './views')
 
 // static file serving
 app.use(express.static(__dirname+'/public'))
+// parsing application/x-www-form-urlencoded
+app.use(bodyParser.urlencoded({extended: false}))
+// parsing JSON
+app.use(bodyParser.json())
+
 
 app.get('/',  (req, res) => {    //  => , function(req,res) 같은 표기법이다.
   res.render('index')
