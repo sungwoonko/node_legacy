@@ -75,7 +75,7 @@ app.post('/api/contact',(req,res) => {
   })
 })
 
-app.get('/contactList',  (req, res) => {
+app.get('/contactList',  (req, res) => { 
   const selectQuery = `SELECT * FROM contact ORDER BY ID DESC`;
 
   connectionPool.query(selectQuery,(err,result) =>{
@@ -91,7 +91,7 @@ app.get('/contactList',  (req, res) => {
 });  
 
 
-app.post('/api/contactDelete/:id',(req,res) => {
+app.delete('/api/contactDelete/:id',(req,res) => {
   const id = req.params.id;
   const deleteQuery = `DELETE FROM CONTACT WHERE ID = '${id}' `
   connectionPool.query(deleteQuery, (err,result) => {
@@ -106,7 +106,7 @@ app.post('/api/contactDelete/:id',(req,res) => {
   })
 })
 
-app.post('/api/contactUpdate/:id', (req,res) => {
+app.put('/api/contactUpdate/:id', (req,res) => {
   const id = req.params.id;
   const status = "done";
   const updateQuery = `UPDATE CONTACT SET status = '${status}' WHERE id = '${id}'`
