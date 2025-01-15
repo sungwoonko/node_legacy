@@ -43,6 +43,10 @@ app.get('/',  (req, res) => {    //  => , function(req,res) 같은 표기법이�
   res.render('index')
 })
 
+app.get('/index',  (req, res) => {    //  => , function(req,res) 같은 표기법이다.
+  res.render('index')
+})
+
 app.get('/blog',  (req, res) => {    
   res.render('blog')
 })
