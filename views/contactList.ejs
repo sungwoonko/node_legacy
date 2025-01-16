@@ -26,7 +26,23 @@
                 <td><%= item.phone %></td>  
                 <td><%= item.email %></td>  
                 <td><%= item.memo %></td>  
-                <td><%= item.status %></td>  
+                <td>  
+                    <% if(item.status === 'done') { %>  
+                      <span class="status done">  
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" fill="#2ecc71">  
+                          <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm-1.5 18l-5-5 1.414-1.414L10.5 14.086 17.086 7.5 18.5 8.914l-7.5 7.5z"/>  
+                        </svg>  
+                        처리 완료  
+                      </span>  
+                    <% } else { %>  
+                      <span class="status pending">  
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" fill="#f39c12">  
+                          <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm0 17h-2v-2h2v2zm0-4h-2V7h2v6z"/>  
+                        </svg>  
+                        대기 중  
+                      </span>  
+                    <% } %>  
+                  </td>  
                 <td><%= item.create_at %></td>  
                 <td><%= item.modify_at %></td>  
                 <td>  

@@ -1,5 +1,157 @@
 <%-include('layouts/header.ejs')%>
+    <!-- ABOUT ME Section -->  
+  <section class="about-section">  
+    <h2 class="section-title">  
+      <span>🔗</span> ABOUT ME  
+    </h2>  
+    <div class="about-grid">  
+      <div class="about-item">  
+        <i class="icon">👤</i>  
+        <p>이름</p>  
+        <span>고성운</span>  
+      </div>  
+      <div class="about-item">  
+        <i class="icon">📅</i>  
+        <p>생년월일</p>  
+        <span>01.11.30</span>  
+      </div>  
+      <div class="about-item">  
+        <i class="icon">📍</i>  
+        <p>위치</p>  
+        <span>경기도 화성시</span>  
+      </div>  
+      <div class="about-item">  
+        <i class="icon">📞</i>  
+        <p>연락처</p>  
+        <span>010-4073-6615</span>  
+      </div>  
+      <div class="about-item">  
+        <i class="icon">📧</i>  
+        <p>이메일</p>  
+        <span>ko_sw@naver.com</span>  
+      </div>  
+      <div class="about-item">  
+        <i class="icon">🎓</i>  
+        <p>학력</p>  
+        <span>홍익대학교 <br> (소프트웨어융합학과)</span>  
+      </div>  
+    </div>  
+  </section>  
 
-    <h2>블로그 입니다.</h2>
+  <!-- SKILLS Section -->  
+  <section class="skills-section">  
+    <h2 class="section-title">  
+      <span>🔗</span> SKILLS  
+    </h2>  
+    <div class="skills-container">  
+      <div class="skill-category">  
+        <p class="category-title"><i class="icon">🖥️</i> Language</p>  
+        <div class="skill-tags">  
+          <span class="tag">TypeScript</span>  
+          <span class="tag">JavaScript</span>  
+          <span class="tag">Python</span>  
+          <span class="tag">JAVA</span>  
+        </div>  
+      </div>  
+      <div class="skill-category">  
+        <p class="category-title"><i class="icon">🌐</i> Frontend</p>  
+        <div class="skill-tags">  
+          <span class="tag">HTML</span>  
+          <span class="tag">CSS</span>   
+        </div>  
+      </div>  
+      <div class="skill-category">  
+        <p class="category-title"><i class="icon">🖧</i> Backend</p>  
+        <div class="skill-tags">   
+        </div>  
+      </div>  
+      <div class="skill-category">  
+        <p class="category-title"><i class="icon">⚙️</i> DevOps</p>  
+        <div class="skill-tags">    
+        </div>  
+      </div>  
+    </div>  
+  </section>
 
+  <section class="archiving-section">  
+    <h2 class="archiving-title">  
+      <span>🔗</span> ARCHIVING  
+    </h2>  
+    <div class="archiving-container">  
+      <!-- GitHub Card -->  
+      <div class="archive-card">  
+        <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub Logo" class="archive-logo">  
+        <div class="archive-content">  
+          <a href="https://github.com/sungwoonko" target="_blank" class="archive-link">github.com/sungwoonko</a>  
+          <p>소스 코드 저장소</p>  
+        </div>  
+      </div>  
+      <!-- Blog Card -->  
+      <div class="archive-card">  
+        <img src="/img/티스토리_로고.png" alt="Blog Logo" class="archive-logo">  
+        <div class="archive-content">  
+          <a href="https://kosw113.tistory.com" target="_blank" class="archive-link">성운 공부방</a>  
+          <p>공부 및 지식 공유 목적의 블로그</p>  
+        </div>  
+      </div>  
+    </div>  
+  </section>
+
+  <section class="projects-section">  
+    <h2 class="projects-title">  
+      🔗 PROJECTS  
+    </h2>  
+    
+    <div class="projects-container">  
+      <!-- Project 1 -->  
+      <div class="project-card">  
+        <div class="project-header">  
+          <span class="project-label">KOSUNGWOON (프로필)</span>  
+          <span class="project-date">2025.01 (1人 개인 프로젝트)</span>  
+        </div>  
+        <h3 class="project-name">Express를 이용한 개인 프로필 사이트</h3>  
+        <ul class="project-details">  
+          <li>개인 포트폴리오 프로필을 보여줄 수 있게 만든 사이트</li>  
+          <li>HTML, CSS, JavaScript를 이용해 반응형 웹페이지 구현</li>  
+          <li>데이터베이스 설정 및 Fetch API 요청 배운 내용 구현</li>  
+        </ul>  
+        <a href="https://github.com/sungwoonko/node_legacy" class="project-link" target="_blank">https://github.com/sungwoonko/node_legacy</a>  
+        <div class="project-tags">  
+          <span>NodeJS</span>  
+          <span>JavaScript</span>  
+          <span>HTML</span>  
+          <span>CSS</span>  
+          <span>EXPRESS</span>  
+        </div>  
+        <div class="project-buttons">  
+          <a href="https://github.com/sungwoonko/node_legacy" class="project-button">README</a>  
+        </div>  
+      </div>  
+  
+      <!-- Project 2 -->  
+      <div class="project-card">  
+        <div class="project-header">  
+          <span class="project-label">홍익대학교 과학기술대학 이스포츠 대회</span>  
+          <span class="project-date">2024.09 (4人 팀 프로젝트)</span>  
+        </div>  
+        <h3 class="project-name">홍익대학교 과학기술대학 <br> 이스포츠 대회 홍보를 위한 웹사이트</h3>  
+        <ul class="project-details">  
+          <li>데이터베이스 과목 프로젝트로 인한 제작</li>  
+          <li>php를 활용해 orcal 서버 연동해 데이터베이스 구축</li>  
+          <li>전체적인 프론트 부분과 로그인과 회원가입 부분 구현</li>  
+        </ul>  
+        <a href="https://github.com/sungwoonko/DB" class="project-link" target="_blank">https://github.com/sungwoonko/DB</a>  
+        <div class="project-tags">  
+          <span>PHP</span>  
+          <span>HTML</span>  
+          <span>CSS</span>  
+          <span>JavaScript</span>  
+        </div>  
+        <div class="project-buttons">  
+          <a href="https://github.com/sungwoonko/DB" class="project-button">README</a>   
+        </div>  
+      </div>  
+    </div>  
+  </section>
+   
 <%-include('layouts/footer.ejs')%>
