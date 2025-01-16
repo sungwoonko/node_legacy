@@ -171,12 +171,15 @@ ul {
   width: 100px;  
   animation: float 3s ease-in-out infinite;  
   opacity: 0; /* 초기 상태로 숨김 */  
-  transition: opacity 0.5s ease-out;
+  transition: opacity 0.5s ease-out, transform 0.5s ease-in-out;  
+  transition-delay: 0.3s; /* 화면에 보일 때 조금 더 늦게 나타나도록 설정 */ 
 }
 
 /* 요소가 화면에 나타날 때 */  
 .hero-section .woon-symbol.visible {  
-  opacity: 1;  
+  opacity: 1;
+  transform: translateY(0); /* 애니메이션 끝 위치 */  
+  transition-delay: 0s; /* 나타난 뒤, 바로 애니메이션 전환 */ 
 }
   
 /* 애니메이션 */  
@@ -661,6 +664,7 @@ textarea:focus {
   font-size: 1rem;  
   color: #555;  
   table-layout: fixed; /* 모든 열의 너비를 균등하게 고정 */  
+  border: 1px solid #ddd; /* 테이블 외곽 경계선 추가 */   
 }  
   
 .contact-table th,  
@@ -680,13 +684,43 @@ textarea:focus {
 }  
   
 .contact-table tbody tr:hover {  
-  background-color: #f1f5ff; /* 행에 마우스 올렸을 때 배경 색상 */  
+  background-color: #f1f5ff; /* 행에 마우스 올렸을 때 배경 색상 */
+  transition: background-color 0.3s ease; /* 부드럽게 전환 효과 */    
 }  
   
 .contact-table td {  
   text-align: center;  
   padding: 12px;  
-  vertical-align: middle;  
+  vertical-align: middle;
+  border-bottom: 1px solid #ddd; /* 행 구분선 */   
+}
+
+/* 기본 상태 스타일 */  
+.status {  
+  display: inline-flex; /* 아이콘과 텍스트를 수평으로 나열 */  
+  align-items: center; /* 아이콘과 텍스트를 세로로 가운데 정렬 */  
+  gap: 8px; /* 아이콘과 텍스트 사이 여백 */  
+  font-size: 1rem; /* 텍스트 크기 */  
+  font-weight: bold; /* 굵게 */  
+  color: #333; /* 텍스트 기본 색상 */  
+}  
+
+/* 처리완료 상태 */  
+.status.done svg {  
+  fill: #2ecc71; /* 체크 아이콘 색상 (초록색) */  
+}  
+
+.status.done {  
+  color: #2ecc71; /* 처리완료 텍스트 색상 */  
+}  
+
+/* 대기중 상태 */  
+.status.pending svg {  
+  fill: #f39c12; /* 경고 아이콘 색상 (주황색) */  
+}  
+
+.status.pending {  
+  color: #f39c12; /* 대기중 텍스트 색상 */  
 }
   
 /* 버튼 스타일 */  
@@ -704,19 +738,25 @@ textarea:focus {
 }  
   
 .update-button {  
-  background-color: #5764c6;  
+  background-color: #5764c6;
+  box-shadow: 0 4px 6px rgba(87, 100, 198, 0.2);  
 }  
   
 .update-button:hover {  
-  background-color: #354895;  
+  background-color: #354895;
+  transform: translateY(-2px); /* 살짝 위로 올라가기 */  
+  box-shadow: 0 6px 10px rgba(53, 72, 149, 0.3);  
 }  
   
 .delete-button {  
-  background-color: #e74c3c;  
+  background-color: #e74c3c;
+  box-shadow: 0 4px 6px rgba(231, 76, 60, 0.2);  
 }  
   
 .delete-button:hover {  
-  background-color: #c0392b;  
+  background-color: #c0392b;
+  transform: translateY(-2px);  
+  box-shadow: 0 6px 10px rgba(192, 57, 43, 0.3);  
 }
 
 
