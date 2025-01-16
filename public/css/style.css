@@ -981,21 +981,21 @@ body {
 /* ====== PROJECTS Section ====== */  
 .projects-section {  
   padding: 3rem 1.5rem;  
-  background-color: #f7f8fa;  
+  background-color: #f9f9f9; /* 더 밝은 배경색 */  
   text-align: center;  
 }  
 
 .projects-title {  
   font-size: 2.5rem;  
   font-weight: bold;  
-  color: #333;  
+  color: #222; /* 더 진한 색감 */  
   margin-bottom: 1rem;  
 }  
 
 .projects-subtitle {  
-  color: #666;  
+  color: #555; /* 부드러운 텍스트 색상 */  
   font-size: 1rem;  
-  margin-bottom: 2rem;  
+  margin-bottom: 2.5rem; /* 조금 더 여유 공간 추가 */  
 }  
 
 .projects-container {  
@@ -1005,69 +1005,74 @@ body {
   gap: 2rem;  
 }  
 
+/* Project Card */  
 .project-card {  
   background-color: white;  
-  border-radius: 12px;  
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);  
-  width: 340px;  
-  padding: 1.5rem;  
+  border-radius: 15px; /* 조금 더 부드러운 모서리 */  
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1); /* 그림자 강화 */  
+  width: 360px; /* 카드 너비 살짝 확장 */  
+  padding: 1.8rem; /* 여백 추가 */  
   text-align: left;  
   transition: transform 0.3s ease, box-shadow 0.3s ease;  
 }  
 
 .project-card:hover {  
-  transform: translateY(-5px);  
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);  
+  transform: translateY(-8px); /* 더 생생한 애니메이션 효과 */  
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15); /* 더 진한 그림자 */  
 }  
 
 /* Project Header */  
 .project-header {  
   display: flex;  
-  justify-content: space-between;  
-  align-items: center;  
-  margin-bottom: 0.5rem;  
+  flex-direction: column; /* 세로로 정렬 */  
+  align-items: flex-start; /* 왼쪽 정렬 */  
+  gap: 0.3rem; /* 줄 간격 */  
+  margin-bottom: 1rem; /* 아래 컨텐츠와의 간격 */  
 }  
 
 .project-label {  
   background-color: #e74c3c;  
-  padding: 0.3rem 0.6rem;  
+  padding: 0.4rem 0.8rem;  
   color: white;  
   font-size: 0.9rem;  
   font-weight: bold;  
-  border-radius: 4px;  
+  border-radius: 6px;  
+  width: fit-content; /* 텍스트 길이에 맞게 크기 조정 */  
 }  
 
 .project-date {  
-  font-size: 0.8rem;  
-  color: #888;  
-}  
+  font-size: 0.85rem;  
+  color: #666;  
+}
 
 /* Project Details */  
 .project-name {  
-  font-size: 1.2rem;  
+  font-size: 1.3rem; /* 더 큼직한 제목 */  
   font-weight: bold;  
-  margin: 0.8rem 0;  
-  color: #333;  
+  margin: 1rem 0 1rem;  
+  color: #222;  
 }  
 
 .project-details {  
   list-style: none;  
   padding: 0;  
-  margin: 0 0 0.8rem 0;  
+  margin: 0 0 1.2rem; /* 여백 조정 */  
   line-height: 1.6;  
   color: #555;  
 }  
 
 .project-details li {  
-  margin-left: 1.2rem;  
+  margin-left: 1.5rem; /* 내부 항목 여백 증가 */  
   position: relative;  
+  font-size: 0.95rem;  
 }  
 
 .project-details li::before {  
   content: '•';  
   position: absolute;  
-  left: -1.2rem;  
-  color: #666;  
+  left: -1.5rem; /* 점의 위치 조정 */  
+  color: #888;  
+  font-size: 1.2rem; /* 아이콘 크기 변경 */  
 }  
 
 /* Project Link */  
@@ -1077,6 +1082,7 @@ body {
   margin-bottom: 1rem;  
   display: inline-block;  
   text-decoration: none;  
+  font-weight: bold;  
 }  
 
 .project-link:hover {  
@@ -1088,36 +1094,44 @@ body {
   display: flex;  
   flex-wrap: wrap;  
   gap: 0.5rem;  
-  margin-bottom: 1rem;  
+  margin-bottom: 1.2rem;  
 }  
 
 .project-tags span {  
-  background-color: #fbf1d3;  
+  background-color: #faf3e0; /* 좀 더 따뜻한 컬러 */  
   color: #5e5c5c;  
   font-size: 0.85rem;  
-  padding: 0.3rem 0.6rem;  
-  border-radius: 8px;  
+  padding: 0.4rem 0.8rem; /* 더 균형 잡힌 패딩 */  
+  border-radius: 8px; /* 둥근 박스 */  
   font-weight: 600;  
+  white-space: nowrap; /* 텍스트 줄바꿈 방지 */  
 }  
 
 /* Buttons */  
 .project-buttons {  
   display: flex;  
-  gap: 0.5rem;  
+  gap: 0.7rem; /* 버튼 사이 간격 확대 */  
 }  
 
 .project-button {  
   font-size: 0.9rem;  
   color: white;  
   background-color: #333;  
-  padding: 0.6rem 1rem;  
-  border-radius: 6px;  
+  padding: 0.6rem 1.2rem;  
+  border-radius: 8px; /* 둥근 테두리 강화 */  
   text-decoration: none;  
   font-weight: bold;  
   text-align: center;  
-  transition: background-color 0.3s ease;  
+  transition: background-color 0.3s ease, transform 0.2s ease; /* 유지 애니메이션 추가 */  
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* 버튼 그림자 추가 */  
 }  
 
 .project-button:hover {  
   background-color: #555;  
+  transform: scale(1.05); /* hover 시 버튼 약간 확대 */  
+}  
+
+.project-button:active {  
+  transform: translateY(2px); /* 누르는 효과 추가 */  
+  background-color: #444; /* 눌렀을 때 색상 변화 */  
 }
