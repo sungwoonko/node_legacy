@@ -51,9 +51,6 @@ app.get('/blog',  (req, res) => {
   res.render('blog')
 })
 
-app.get('/users',  (req, res) => {   
-  res.render('users')
-})
 
 app.get('/contact',  (req, res) => {    
   res.render('contact')
