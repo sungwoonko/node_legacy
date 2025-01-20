@@ -26,13 +26,14 @@ const addContact = (req,res) => {
             return res.status(500).send('내부 서버 오류')
         }
 
-        res.status(201).json({message: '문의사항이 등록 되었습니다',contactId: result.insertId});
+        res.status(201).json({ message: '문의사항이 등록 되었습니다', id: result.id });
     })
 }
 
 // 데이터 수정 API Controller
 const updateContact = (req,res) => {
-    const id = req.prams.id;
+    const id = req.params.id; // 오타수정
+    console.log("Received contactId:", id); // 확인용 로그
 
     contactModel.updateContactStatus(id,(err,result)=> {
         if (err){
@@ -46,7 +47,8 @@ const updateContact = (req,res) => {
 
 // 데이터 삭제 API Controller
 const deleteContact = (req,res) => {
-    const id = req.prams.id;
+    const id = req.params.id;
+    console.log("Received contactId:", id); // 확인용 로그
 
     contactModel.deleteContact(id,(err,result)=> {
         if (err){
